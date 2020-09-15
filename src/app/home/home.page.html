@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-lable>{{currentDate}}</ion-lable>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Real TIme Shared</ion-title>
+    </ion-toolbar>
+ 
+  </ion-header>
+
+  <h1>Add Details</h1>
+  <ion-input [(ngModel)]="firstName" placeholder="First Name"></ion-input>
+  <ion-input [(ngModel)]="lastName" placeholder="Last Name"></ion-input>
+  <ion-button color="primary" expand="full" (click)="addItem({firstName:firstName, lastName:lastName})">Add</ion-button>
+  <ion-button color="primary" expand="full" (click)="showPreview()">Preview</ion-button>
+  
+  <ion-list>
+    <h1>All Item List</h1>
+    <ion-item *ngFor="let item of items" (click)="deleteItem(item.key)">
+     <ion-label>First Name</ion-label> {{item.firstName}} &nbsp;&nbsp;
+     <ion-label>Last Name</ion-label>{{item.lastName}}
+    </ion-item>
+  </ion-list>
+</ion-content>

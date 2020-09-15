@@ -1,0 +1,8 @@
+{
+  "name": "RealTime",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "4473be94"
+}
